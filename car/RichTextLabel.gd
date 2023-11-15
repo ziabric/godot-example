@@ -5,4 +5,4 @@ func _ready():
 
 func _process(delta):
 	var angle = get_parent().rotation_speed * 180 / PI
-	text = "Speed : " + str(get_parent().speed) + "\nAngle : " + str(int(angle))
+	text = "Speed : " + str(get_parent().speed) + "\nAngle : " + str(int(angle)) + " \n tmp : " + str(get_parent().maxRotation1)
