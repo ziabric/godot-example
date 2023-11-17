@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bewkd8v7nwj1c"]
+[gd_scene load_steps=6 format=3 uid="uid://bewkd8v7nwj1c"]
 
 [ext_resource type="Texture2D" uid="uid://cbt4eeysyvigr" path="res://car/carSprite.png" id="1_gvci2"]
 [ext_resource type="Script" path="res://car/car.gd" id="1_trguo"]
+[ext_resource type="Script" path="res://car/Camera2D.gd" id="3_4v4q3"]
 [ext_resource type="Script" path="res://car/RichTextLabel.gd" id="3_nire2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f48u1"]
@@ -19,6 +20,7 @@ shape = SubResource("RectangleShape2D_f48u1")
 texture = ExtResource("1_gvci2")
 
 [node name="Camera2D" type="Camera2D" parent="CarBody"]
+script = ExtResource("3_4v4q3")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CarBody"]
 offset_left = -72.0
