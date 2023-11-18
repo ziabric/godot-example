@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://chckggdwfn51m"]
+[gd_scene load_steps=2 format=3 uid="uid://chckggdwfn51m"]
+
+[ext_resource type="Script" path="res://settings/settings.gd" id="1_lxv2m"]
 
 [node name="Settings" type="Node2D"]
+script = ExtResource("1_lxv2m")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -22,10 +25,12 @@ offset_top = -128.0
 offset_right = -192.0
 offset_bottom = -96.0
 
-[node name="Button4" type="Button" parent="."]
+[node name="Back" type="Button" parent="."]
 offset_left = 320.0
 offset_top = 192.0
 offset_right = 512.0
 offset_bottom = 224.0
 text = "Back
 "
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

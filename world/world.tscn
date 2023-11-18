@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3rjn8v2olysf"]
+[gd_scene load_steps=9 format=3 uid="uid://b3rjn8v2olysf"]
 
 [ext_resource type="Texture2D" uid="uid://cwmtxruuofap3" path="res://world/example.png" id="1_pyebj"]
 [ext_resource type="PackedScene" uid="uid://bewkd8v7nwj1c" path="res://car/car.tscn" id="2_qq7e2"]
+[ext_resource type="PackedScene" uid="uid://eyvvsmm2girt" path="res://trafficCone/trafficCone.tscn" id="3_bdsr7"]
+[ext_resource type="PackedScene" uid="uid://q8o3pml1j0ub" path="res://checkpoint/checkpoint.tscn" id="4_1nf8e"]
 
 [sub_resource type="GDScript" id="GDScript_6hoh1"]
 script/source = "extends Node2D
@@ -67,10 +69,34 @@ layer_0/tile_data = PackedInt32Array(65525, 1, 3, 131061, 1, 4, 65526, 65537, 3,
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-448, 416, -512, 304, -424, 376, 336, 368, 808, 368, 1592, 392, 1784, 312, 1664, -440, 1672, -1568, 2080, -1568, 2136, 680, -928, 632, -944, 248, -560, 208, -696, 168)
+polygon = PackedVector2Array(-448, 416, -512, 304, -424, 376, 336, 368, 808, 368, 1592, 392, 1586, 107, 1538, -181, 1578, -565, 1672, -1568, 2080, -1568, 2136, 680, -928, 632, -944, 248, -847, 134, -696, 168)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(-864, 136, -1056, 128, -1152, 232, -1288, 288, -1392, 344, -1528, 360, -1616, 368, -1648, 408, -2632, 408, -2848, 344, -3096, 152, -3264, 64, -3400, 48, -3480, -32, -3576, -176, -3656, -304, -3704, -424, -3728, -496, -3800, -568, -3856, -648, -3872, -736, -3936, -784, -3976, -1048, -4056, -1272, -4080, -1472, -4000, -1840, -4008, -2624, -3912, -2832, -3784, -3104, -3672, -3288, -3216, -4104, -2888, -4464, -2104, -4936, -1472, -5608, -1304, -5736, -1144, -6328, -632, -7112, -48, -7456, 576, -7720, 1264, -7880, 1720, -7832, 2080, -7640, 2424, -7408, 2808, -7080, 3008, -6848, 3120, -6672, 3128, -6192, 3040, -6056, 3064, -5896, 3104, -5760, 3160, -5568, 3160, -5344, 3088, -5112, 2968, -4936, 2864, -4608, 2800, -3848, 2680, -3232, 2400, -2680, 2104, -2288, 1856, -1936, 1624, -1664, 1576, -1472, 2096, -1712, 3240, -2976, 3712, -5176, 3592, -7040, 2952, -8024, 648, -8368, -864, -7664, -1992, -6776, -2896, -5664, -3864, -4696, -4472, -3392, -4632, -1920, -4408, -240, -3584, 984, -1744, 824)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(-976, -608, -1288, -488, -1592, -472, -1864, -584, -2088, -776, -2320, -1080, -2528, -1488, -2568, -1952, -2416, -2696, -2032, -3216, -1400, -3792, -584, -4304, -232, -4784, -80, -5560, 72, -6072, 768, -6432, 1112, -6416, 1296, -6176, 1528, -6008, 1560, -5520, 1472, -5096, 1368, -4656, 1160, -4336, 1080, -3992, 912, -3448, 776, -2992, 456, -2688, 16, -2304, -352, -1904, -544, -1736)
+
+[node name="TrafficCone" parent="." instance=ExtResource("3_bdsr7")]
+position = Vector2(-961, -136)
+
+[node name="TrafficCone2" parent="." instance=ExtResource("3_bdsr7")]
+position = Vector2(-931, 19)
+
+[node name="TrafficCone3" parent="." instance=ExtResource("3_bdsr7")]
+position = Vector2(-1000, -296)
+
+[node name="Checkpoint" parent="." instance=ExtResource("4_1nf8e")]
+position = Vector2(1503, -2759)
+rotation = 0.394444
+scale = Vector2(7.52, 5.115)
+
+[node name="Checkpoint2" parent="." instance=ExtResource("4_1nf8e")]
+position = Vector2(350, -6921)
+rotation = 1.2514
+scale = Vector2(6.75, 1.685)
+
+[node name="Checkpoint3" parent="." instance=ExtResource("4_1nf8e")]
+position = Vector2(-3248, -2274)
+rotation = 0.158825
+scale = Vector2(7.31, 1.02)

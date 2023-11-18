@@ -1,14 +1,14 @@
 extends CharacterBody2D
 
 var rotation_speed = 0
-var maxRotation1 = 3
-var maxRotation = 3
-var steeringLimiterRatio = 0.005
+var maxRotation1 = 2
+var maxRotation = 2
+var steeringLimiterRatio = 0.001
 var rotationStep = 0.05
 var returnStep = 0.2
 var speed = 0
 var maxAngle = 60
-var maxSpeed = 400
+var maxSpeed = 1000
 var speedStep = 10
 
 var boostCount = 10000
